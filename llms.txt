@@ -1,0 +1,78 @@
+# TRANSCODE — Japan Market Intelligence Platform
+
+> Structured intelligence from Japan's authoritative public data sources.
+> Built for autonomous AI agents. 24 MCP tools, 11 data sources.
+
+## Quick Start (MCP Integration)
+
+Install via npx:
+```
+npx transcode-mcp-server
+```
+
+Or add to your MCP config:
+```json
+{
+  "mcpServers": {
+    "transcode": {
+      "command": "npx",
+      "args": ["-y", "transcode-mcp-server"],
+      "env": {
+        "TRANSCODE_API_URL": "https://japan-intelligence-api.onrender.com",
+        "TRANSCODE_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+```
+
+## Available Tools (24)
+
+### Intelligence (Start Here)
+- japan_briefing: Complete Japan market briefing in one call
+- market_snapshot: Real-time market overview
+- company_intelligence: Cross-source company analysis (5+ sources)
+- disclosure_stats: Disclosure category/impact distribution
+
+### Company
+- company_profile: gBizINFO corporate profile (subsidies, patents, certifications)
+- company_search: Search 5M+ Japanese corporations
+- company_context: Corporate history (253 companies, founding to present)
+- company_context_list: Browse corporate history database by industry
+- financials: J-Quants financial statements
+- listed_stocks: All TSE-listed stocks master
+- earnings_calendar: Earnings announcement schedule
+- stock_prices: Historical OHLCV + moving averages
+- sector_summary: Sector composition analysis
+
+### Market & Macro
+- get_disclosures: TDnet real-time disclosures (15 categories)
+- get_macro: 6 macro indicators (Oil, Gold, USD/JPY, VIX, Nikkei, S&P)
+- detect_events: Macro anomaly detection
+- government_stats: e-Stat (GDP, CPI, unemployment, 10 series)
+- stats_summary: Japan macro statistics summary
+- global_macro: FRED US+Japan macro (rates, CPI, employment)
+- policy_summary: US-Japan monetary policy summary
+- tankan: BOJ Tankan business sentiment DI
+- investor_flows: JPX weekly investor flow (foreign/domestic)
+- lookup_ticker: Stock code → company name resolution
+- interpret: AI interpretation (Layer 2)
+
+## Data Sources (11)
+1. TDnet — Tokyo Stock Exchange real-time disclosures
+2. EDINET — FSA institutional holdings (5%+ ownership)
+3. gBizINFO — 5M+ corporate profiles, subsidies, patents
+4. e-Stat — Japanese government statistics (GDP, CPI, employment)
+5. J-Quants — Market data, financials, listed stocks
+6. FRED — US macro indicators
+7. BOJ — Bank of Japan Tankan survey
+8. JPX — Investor flow data
+9. Yahoo Finance — Real-time prices via yfinance
+10. Gemini — AI interpretation engine
+11. The社史 — Corporate history for 253 listed companies
+
+## Links
+- Homepage: https://transcode.sh
+- npm: https://www.npmjs.com/package/transcode-mcp-server
+- GitHub: https://github.com/hiroshic9-png/japan-intelligence-api
+- API Docs: https://japan-intelligence-api.onrender.com/docs
