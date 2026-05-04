@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcode — Japan's Public Data Infrastructure for AI Agents</title>
+  <meta name="description" content="10 government and exchange data sources, transcoded into structured intelligence. 22 MCP tools, one API. Built for autonomous AI agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">TRANSCODE</a>
+      <div class="nav-links">
+        <a href="#sources">Sources</a>
+        <a href="#integrate">Integrate</a>
+        <a href="https://japan-intelligence-api.onrender.com/docs" target="_blank" class="nav-cta">Docs →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag">intelligence platform</p>
+      <h1 class="hero-title">TRANSCODE</h1>
+      <p class="hero-subtitle">Japan's public data infrastructure for AI agents.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="10">0</span>
+          <span class="stat-label">Sources</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="35">0</span>
+          <span class="stat-label">Endpoints</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="22">0</span>
+          <span class="stat-label">MCP Tools</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3889">0</span>
+          <span class="stat-label">Companies</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#integrate" class="btn btn-primary">Get Started</a>
+        <a href="https://japan-intelligence-api.onrender.com/docs" target="_blank" class="btn btn-secondary">Documentation →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Demo -->
+  <section class="demo">
+    <p class="demo-label">See it in action</p>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <span class="terminal-title">japan-briefing</span>
+      </div>
+      <div class="terminal-body">
+        <pre><code><span class="terminal-prompt">$</span> <span class="terminal-cmd">curl</span> <span class="terminal-flag">-H</span> <span class="terminal-url">"X-API-Key: tk_live_..."</span> \
+  <span class="terminal-url">https://api.transcode.sh/v1/japan-briefing</span></code></pre>
+        <div class="terminal-response" id="terminal-response">
+          <pre><code id="typewriter-target"></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="pillars">
+    <div class="container">
+      <div class="pillars-list">
+        <div class="pillar fade-in">
+          <span class="pillar-num">01</span>
+          <div class="pillar-content">
+            <h3 class="pillar-title">Unified access to 10 sources</h3>
+            <p class="pillar-desc">One API key unlocks TDnet, EDINET, J-Quants, e-Stat, gBizINFO, BOJ, JPX, FRED, and more. No separate registrations. No auth juggling.</p>
+          </div>
+        </div>
+        <div class="pillar fade-in">
+          <span class="pillar-num">02</span>
+          <div class="pillar-content">
+            <h3 class="pillar-title">Structured English translation</h3>
+            <p class="pillar-desc">Raw Japanese filings and statistics, normalized into token-efficient JSON with full entity resolution across 3,889 TSE-listed companies.</p>
+          </div>
+        </div>
+        <div class="pillar fade-in">
+          <span class="pillar-num">03</span>
+          <div class="pillar-content">
+            <h3 class="pillar-title">Agent-native MCP interface</h3>
+            <p class="pillar-desc">22 tools with imperative descriptions optimized for autonomous selection. Built for Claude, Cursor, Windsurf, and any MCP-compatible agent.</p>
+          </div>
+        </div>
+        <div class="pillar fade-in">
+          <span class="pillar-num">04</span>
+          <div class="pillar-content">
+            <h3 class="pillar-title">AI-powered interpretation layer</h3>
+            <p class="pillar-desc">Beyond raw data. Gemini-powered interpretation adds impact scoring, trend analysis, and actionable market context to every response.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sources -->
+  <section class="sources" id="sources">
+    <div class="container">
+      <h2 class="section-title">10 sources. One interface.</h2>
+      <p class="section-sub">Government registries, stock exchanges, central bank data — unified and structured for agent consumption.</p>
+      <div class="bento">
+        <div class="bento-card fade-in">
+          <div class="bento-header">
+            <span class="bento-badge gov">GOV</span>
+            <span class="bento-name">TDnet</span>
+          </div>
+          <p class="bento-desc">Real-time corporate disclosures from Tokyo Stock Exchange. 15-category classification with AI impact scoring.</p>
+        </div>
+        <div class="bento-card span-2 fade-in">
+          <div class="bento-header">
+            <span class="bento-badge gov">GOV</span>
+            <span class="bento-name">EDINET</span>
+          </div>
+          <p class="bento-desc">SEC-equivalent filings from Japan's Financial Services Agency. Annual reports, large shareholding reports. All 3,889 TSE companies fully mapped with ticker resolution.</p>
+        </div>
+        <div class="bento-card span-2 fade-in">
+          <div class="bento-header">
+            <span class="bento-badge mkt">MKT</span>
+            <span class="bento-name">J-Quants</span>
+          </div>
+          <p class="bento-desc">JPX official market data. Full stock master, earnings, financials, historical OHLCV prices, and sector analysis for all listed companies.</p>
+        </div>
+        <div class="bento-card fade-in">
+          <div class="bento-header">
+            <span class="bento-badge gov">GOV</span>
+            <span class="bento-name">e-Stat</span>
+          </div>
+          <p class="bento-desc">Japan's official statistics portal. GDP, CPI, unemployment, Economy Watchers, trade — 10 macroeconomic series.</p>
+        </div>
+        <div class="bento-card fade-in">
+          <div class="bento-header">
+            <span class="bento-badge gov">GOV</span>
+            <span class="bento-name">gBizINFO</span>
+          </div>
+          <p class="bento-desc">5M+ corporate entities. Subsidies, patents, certifications, procurement records.</p>
+        </div>
+        <div class="bento-card fade-in">
+          <div class="bento-header">
+            <span class="bento-badge cbk">CBK</span>
+            <span class="bento-name">BOJ Tankan</span>
+          </div>
+          <p class="bento-desc">Quarterly business confidence survey. DI across all sectors and enterprise sizes.</p>
+        </div>
+        <div class="bento-card fade-in">
+          <div class="bento-header">
+            <span class="bento-badge mkt">MKT</span>
+            <span class="bento-name">JPX Flows</span>
+          </div>
+          <p class="bento-desc">Investor flow data by sector. 9 categories with directional signal interpretation.</p>
+        </div>
+        <div class="bento-card fade-in">
+          <div class="bento-header">
+            <span class="bento-badge cbk">CBK</span>
+            <span class="bento-name">FRED</span>
+          </div>
+          <p class="bento-desc">US-Japan macro bridge. Fed funds, BOJ rate, USD/JPY, VIX, yield curves.</p>
+        </div>
+        <div class="bento-card fade-in">
+          <div class="bento-header">
+            <span class="bento-badge ai">AI</span>
+            <span class="bento-name">Gemini 2.5</span>
+          </div>
+          <p class="bento-desc">AI interpretation layer. Structured data explained with market context and impact analysis.</p>
+        </div>
+        <div class="bento-card dashed fade-in">
+          <div class="bento-header">
+            <span class="bento-badge" style="background:var(--bg-elevated);color:var(--text-muted);">+</span>
+            <span class="bento-name">Growing</span>
+          </div>
+          <p class="bento-desc">Patent Office, short selling reports, bid data — new sources shipping quarterly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration -->
+  <section class="integrate" id="integrate">
+    <div class="container">
+      <h2 class="section-title">Integrate in 60 seconds.</h2>
+      <div class="integrate-tabs">
+        <button class="tab active" data-tab="claude">Claude Desktop</button>
+        <button class="tab" data-tab="cursor">Cursor</button>
+        <button class="tab" data-tab="api">REST API</button>
+      </div>
+      <div class="code-panels">
+        <div class="code-panel active" id="panel-claude">
+          <div class="code-header">
+            <span>claude_desktop_config.json</span>
+            <button class="copy-btn" data-target="code-claude">Copy</button>
+          </div>
+          <pre class="code-block"><code id="code-claude">{
+  "mcpServers": {
+    "transcode-japan": {
+      "command": "npx",
+      "args": ["-y", "transcode-mcp-server"],
+      "env": {
+        "TRANSCODE_API_KEY": "your-api-key"
+      }
+    }
+  }
+}</code></pre>
+        </div>
+        <div class="code-panel" id="panel-cursor">
+          <div class="code-header">
+            <span>.cursor/mcp.json</span>
+            <button class="copy-btn" data-target="code-cursor">Copy</button>
+          </div>
+          <pre class="code-block"><code id="code-cursor">{
+  "mcpServers": {
+    "transcode-japan": {
+      "command": "npx",
+      "args": ["-y", "transcode-mcp-server"],
+      "env": {
+        "TRANSCODE_API_KEY": "your-api-key"
+      }
+    }
+  }
+}</code></pre>
+        </div>
+        <div class="code-panel" id="panel-api">
+          <div class="code-header">
+            <span>cURL</span>
+            <button class="copy-btn" data-target="code-api">Copy</button>
+          </div>
+          <pre class="code-block"><code id="code-api">curl -H "X-API-Key: your-api-key" \
+  https://api.transcode.sh/v1/japan-briefing</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="architecture">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-sub">Four layers between raw government data and your agent's context window.</p>
+      <div class="arch-flow">
+        <div class="arch-step fade-in">
+          <div class="arch-step-num">01 ACQUIRE</div>
+          <h4 class="arch-step-title">Raw Sources</h4>
+          <ul class="arch-step-items">
+            <li>10 government &amp; exchange APIs</li>
+            <li>Real-time polling</li>
+            <li>Auth &amp; rate limit management</li>
+          </ul>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step fade-in">
+          <div class="arch-step-num">02 NORMALIZE</div>
+          <h4 class="arch-step-title">Structure</h4>
+          <ul class="arch-step-items">
+            <li>Cross-source entity resolution</li>
+            <li>3,889 company ticker mapping</li>
+            <li>Category classification</li>
+          </ul>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step fade-in">
+          <div class="arch-step-num">03 INTERPRET</div>
+          <h4 class="arch-step-title">Intelligence</h4>
+          <ul class="arch-step-items">
+            <li>Gemini 2.5 Flash analysis</li>
+            <li>Impact scoring</li>
+            <li>Trend narratives</li>
+          </ul>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step fade-in">
+          <div class="arch-step-num">04 DELIVER</div>
+          <h4 class="arch-step-title">Agent Interface</h4>
+          <ul class="arch-step-items">
+            <li>22 MCP tools</li>
+            <li>REST API + Swagger</li>
+            <li>Token-efficient JSON</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="trust">
+    <div class="container">
+      <p class="trust-label">Powered by official data from</p>
+      <div class="trust-sources">
+        <div class="trust-chip">TDnet <span>TSE</span></div>
+        <div class="trust-chip">EDINET <span>FSA</span></div>
+        <div class="trust-chip">J-Quants <span>JPX</span></div>
+        <div class="trust-chip">e-Stat <span>MIC</span></div>
+        <div class="trust-chip">gBizINFO <span>DIGI</span></div>
+        <div class="trust-chip">BOJ <span>Bank of Japan</span></div>
+        <div class="trust-chip">FRED <span>Federal Reserve</span></div>
+      </div>
+      <div class="trust-metrics">
+        <div class="trust-metric fade-in">
+          <div class="trust-metric-num">20/20</div>
+          <div class="trust-metric-label">Agent stress test</div>
+        </div>
+        <div class="trust-metric fade-in">
+          <div class="trust-metric-num">3,889</div>
+          <div class="trust-metric-label">Companies mapped</div>
+        </div>
+        <div class="trust-metric fade-in">
+          <div class="trust-metric-num">&lt;2s</div>
+          <div class="trust-metric-label">Avg response</div>
+        </div>
+        <div class="trust-metric fade-in">
+          <div class="trust-metric-num">100%</div>
+          <div class="trust-metric-label">Ticker resolution</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta-title">The intelligence infrastructure for Japan.</h2>
+      <p class="cta-sub">Available today.</p>
+      <div class="cta-actions">
+        <a href="#integrate" class="btn btn-primary">Get Started</a>
+        <a href="https://japan-intelligence-api.onrender.com/docs" target="_blank" class="btn btn-secondary">Read the Docs →</a>
+      </div>
+      <div class="cta-requests">
+        <a href="mailto:h.sato@c-9.co.jp?subject=Transcode%20API%20Key%20Request&body=I'd%20like%20to%20request%20an%20API%20key%20for%20Transcode.%0A%0AUse%20case%3A%20%0AAgent%20platform%3A%20" class="cta-link" id="request-key">Request API Key →</a>
+        <span class="cta-divider">·</span>
+        <a href="https://github.com/hiroshic9-png/japan-intelligence-api/issues/new?template=data_source_request.md&title=%5BData+Request%5D+" target="_blank" class="cta-link" id="request-data">Request a Data Source →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">TRANSCODE</span>
+        <span class="footer-tagline">intelligence platform</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://japan-intelligence-api.onrender.com/docs" target="_blank">API Docs</a>
+        <a href="https://github.com/hiroshic9-png/japan-intelligence-api" target="_blank">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2026 Transcode</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
