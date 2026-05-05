@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "generated_at": "2026-05-05T10:29:25.023977+09:00",
+    "date": "2026-05-05",
+    "source": "TRANSCODE Japan Market Intelligence",
+    "website": "https://transcode.sh",
+    "api_docs": "https://japan-intelligence-api.onrender.com/docs",
+    "license": "Data sourced from Japanese government and exchange public APIs"
+  },
+  "market_indicators": [],
+  "anomaly_events": [],
+  "latest_disclosures": [],
+  "macro_summary": {
+    "status": "ok",
+    "source": "e-stat",
+    "updated_at": "2026-05-05T01:29:26.195379",
+    "count": 1,
+    "data": {
+      "series_count": 10,
+      "series": {
+        "gdp": {
+          "label": "GDP（国内総生産）",
+          "category": "economy",
+          "latest": {
+            "value": "126277.3",
+            "time": "1994000103",
+            "unit": "10億円",
+            "@cat01": "11"
+          },
+          "count": 5
+        },
+        "cpi": {
+          "label": "消費者物価指数（CPI）",
+          "category": "prices",
+          "latest": {
+            "value": "112.4",
+            "time": "2026000404",
+            "unit": "",
+            "@cat01": "0001"
+          },
+          "count": 5
+        },
+        "unemployment": {
+          "label": "完全失業率",
+          "category": "employment",
+          "latest": {
+            "value": "88.0",
+            "time": "",
+            "unit": "％",
+            "@cat01": "200400"
+          },
+          "count": 5
+        },
+        "industrial_production": {
+          "label": "鉱工業生産指数",
+          "category": "industry",
+          "latest": {
+            "value": "56803907",
+            "time": "1993100000",
+            "unit": "百万円",
+            "@cat01": "11"
+          },
+          "count": 5
+        },
+        "retail_sales": {
+          "label": "小売業販売額",
+          "category": "",
+          "latest": null,
+          "count": 0
+        },
+        "economy_watchers": {
+          "label": "景気ウォッチャー調査（DI）",
+          "category": "sentiment",
+          "latest": {
+            "value": "42.2",
+            "time": "2026000303",
+            "unit": "",
+            "@cat01": "100",
+            "@cat02": "100"
+          },
+          "count": 5
+        },
+        "economy_watchers_regional": {
+          "label": "景気ウォッチャー調査（地域別DI）",
+          "category": "sentiment",
+          "latest": {
+            "value": "42.2",
+            "time": "2026000303",
+            "unit": "",
+            "@cat01": "100"
+          },
+          "count": 5
+        },
+        "household_spending": {
+          "label": "家計調査（消費支出）",
+          "category": "consumption",
+          "latest": {
+            "value": "10000",
+            "time": "2000000101",
+            "unit": "一万分比",
+            "@cat01": "000100000",
+            "@cat02": "03"
+          },
+          "count": 5
+        },
+        "trade_exports": {
+          "label": "貿易統計（輸出）",
+          "category": "trade",
+          "latest": {
+            "value": "0",
+            "time": "2005000000",
+            "unit": "",
+            "@cat01": "00000000",
+            "@cat02": "110"
+          },
+          "count": 5
+        },
+        "trade_imports": {
+          "label": "貿易統計（輸入）",
+          "category": "trade",
+          "latest": {
+            "value": "0",
+            "time": "2015000000",
+            "unit": "",
+            "@cat01": "00000000",
+            "@cat02": "110"
+          },
+          "count": 5
+        }
+      },
+      "source": "e-stat"
+    },
+    "pagination": null,
+    "meta": {
+      "api_version": "v1"
+    }
+  },
+  "investor_flows": {
+    "status": "ok",
+    "source": "jpx",
+    "updated_at": "2026-05-05T01:29:26.367614",
+    "count": 1,
+    "data": {
+      "period": "2026年4月第4週 2026/4 week4  ( 4/20 - 4/24 )",
+      "total_trading_value": null,
+      "unit": "千円 (1,000 JPY)",
+      "flows": {
+        "individuals": {
+          "name_jp": "個人",
+          "sells": 10698363664,
+          "buys": 10810722711,
+          "net": 112359047,
+          "signal": "contrarian_bearish"
+        },
+        "foreigners": {
+          "name_jp": "海外投資家",
+          "sells": 25014644665,
+          "buys": 25841180566,
+          "net": 826535901,
+          "signal": "bullish_signal"
+        },
+        "securities_cos": {
+          "name_jp": "証券会社",
+          "sells": 145553555,
+          "buys": 139116638,
+          "net": -6436917,
+          "signal": "net_sell"
+        },
+        "investment_trusts": {
+          "name_jp": "投資信託",
+          "sells": 608209321,
+          "buys": 505146421,
+          "net": -103062900,
+          "signal": "retail_bearish"
+        },
+        "corporations": {
+          "name_jp": "事業法人",
+          "sells": 287329944,
+          "buys": 407243444,
+          "net": 119913500,
+          "signal": "buyback_support"
+        },
+        "other_institutions": {
+          "name_jp": "その他法人",
+          "sells": 143146778,
+          "buys": 102602794,
+          "net": -40543984,
+          "signal": "net_sell"
+        },
+        "insurance": {
+          "name_jp": "生保・損保",
+          "sells": 106187197,
+          "buys": 27440737,
+          "net": -78746460,
+          "signal": "net_sell"
+        },
+        "banks": {
+          "name_jp": "都銀・地銀等",
+          "sells": 57451257,
+          "buys": 48804216,
+          "net": -8647041,
+          "signal": "net_sell"
+        },
+        "trust_banks": {
+          "name_jp": "信託銀行",
+          "sells": 746916768,
+          "buys": 742737624,
+          "net": -4179144,
+          "signal": "pension_selling"
+        }
+      },
+      "highlights": [
+        "外国人: 827百万円の買い越し",
+        "個人: 112百万円の買い越し",
+        "信託銀行(年金代理): 4百万円の売り越し"
+      ],
+      "source": "jpx",
+      "source_url": "https://www.jpx.co.jp/markets/statistics-equities/investor-type/t13vrt0000013zuk-att/stock_val_1_260404.xls"
+    },
+    "pagination": null,
+    "meta": {
+      "api_version": "v1"
+    }
+  },
+  "tankan": {
+    "status": "ok",
+    "source": "boj",
+    "updated_at": "2026-05-05T01:29:26.538034",
+    "count": 1,
+    "data": {
+      "items": [
+        {
+          "id": "tankan_large_manufacturing",
+          "label": "短観 大企業 製造業 業況判断DI",
+          "description": "日本経済の「体温計」。プラスは好況、マイナスは不況を示す。",
+          "latest_value": [
+            17
+          ],
+          "latest_period": [
+            "2026Q01"
+          ],
+          "previous_value": [
+            15
+          ],
+          "change": 2.0,
+          "trend": "improving"
+        },
+        {
+          "id": "tankan_large_nonmanufacturing",
+          "label": "短観 大企業 非製造業 業況判断DI",
+          "description": "サービス・金融等。国内消費の強さを反映。",
+          "latest_value": [
+            36
+          ],
+          "latest_period": [
+            "2026Q01"
+          ],
+          "previous_value": [
+            34
+          ],
+          "change": 2.0,
+          "trend": "improving"
+        },
+        {
+          "id": "tankan_small_manufacturing",
+          "label": "短観 中小企業 製造業 業況判断DI",
+          "description": "中小製造業の景況感。大企業との乖離が重要。",
+          "latest_value": [
+            16
+          ],
+          "latest_period": [
+            "2026Q01"
+          ],
+          "previous_value": [
+            16
+          ],
+          "change": 0.0,
+          "trend": "flat"
+        },
+        {
+          "id": "tankan_small_nonmanufacturing",
+          "label": "短観 中小企業 非製造業 業況判断DI",
+          "description": "街角の景況感に近い。地方経済の実態を反映。",
+          "latest_value": [
+            27
+          ],
+          "latest_period": [
+            "2026Q01"
+          ],
+          "previous_value": [
+            25
+          ],
+          "change": 2.0,
+          "trend": "improving"
+        },
+        {
+          "id": "tankan_all_industry",
+          "label": "短観 全規模 全産業 業況判断DI",
+          "description": "全企業を網羅した総合的な景況指標。",
+          "latest_value": [
+            18
+          ],
+          "latest_period": [
+            "2026Q01"
+          ],
+          "previous_value": [
+            17
+          ],
+          "change": 1.0,
+          "trend": "improving"
+        }
+      ],
+      "source": "boj"
+    },
+    "pagination": null,
+    "meta": {
+      "api_version": "v1"
+    }
+  }
+}
