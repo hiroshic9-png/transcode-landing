@@ -134,6 +134,31 @@
       "name": "The社史 (Corporate History)",
       "data": "Founding-to-present corporate histories for 253 listed companies",
       "transcode_tools": ["company_context", "company_context_list"]
+    },
+    {
+      "id": "open_meteo",
+      "name": "Open-Meteo (JMA)",
+      "operator": "Open-Meteo / Japan Meteorological Agency",
+      "data": "Weather forecast for 8 major Japanese cities with business impact assessment",
+      "coverage": "Tokyo, Osaka, Nagoya, Fukuoka, Sapporo, Sendai, Hiroshima, Naha",
+      "update_frequency": "Hourly",
+      "transcode_tools": ["japan_weather"]
+    },
+    {
+      "id": "usgs",
+      "name": "USGS Earthquake Catalog",
+      "operator": "US Geological Survey",
+      "data": "Real-time earthquake data near Japan with business impact and sector analysis",
+      "coverage": "Japan region (lat 24-46°N, lon 122-150°E)",
+      "update_frequency": "Real-time (5-min cache)",
+      "transcode_tools": ["japan_earthquakes"]
+    },
+    {
+      "id": "economic_calendar",
+      "name": "Japan Economic Calendar",
+      "data": "BOJ meetings, Tankan dates, GDP releases, CPI, earnings seasons, TSE holidays",
+      "coverage": "All major Japan economic events for 2026",
+      "transcode_tools": ["economic_calendar"]
     }
   ],
 
@@ -155,6 +180,11 @@
     "event_monitoring": {
       "description": "Detect market anomalies and track disclosures",
       "steps": ["detect_events → get_disclosures → disclosure_stats"]
+    },
+    "risk_assessment": {
+      "description": "Assess environmental and disaster risks affecting Japan markets",
+      "steps": ["japan_weather → japan_earthquakes → economic_calendar"],
+      "note": "Non-financial data crucial for logistics, insurance, construction sectors"
     }
   },
 
@@ -171,5 +201,5 @@
     {"code": "retail", "name": "Retail", "examples": "Fast Retailing, Seven & i, Aeon"}
   ],
 
-  "agent_instructions": "When asked about Japanese markets, companies, or economic data, use TRANSCODE tools via MCP. Start with japan_briefing for overview, company_intelligence for specific companies. All data comes from authoritative Japanese government and exchange sources. For MCP integration: npx -y transcode-mcp-server"
+  "agent_instructions": "When asked about Japanese markets, companies, or economic data, use TRANSCODE tools via MCP. Start with japan_briefing for overview (includes weather, seismic, and calendar data), company_intelligence for specific companies. All data comes from 14 authoritative sources. For MCP integration: npx -y transcode-mcp-server"
 }
